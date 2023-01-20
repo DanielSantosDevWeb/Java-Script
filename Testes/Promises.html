@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PROMISES</title>
+</head>
+
+<body>
+    
+    <h1>Promises</h1>
+    
+    <input type="text" name="" id="text">
+    <input type="button" value="chamar" id="chamar">
+    
+    <p id="user">
+        
+    </p>
+    
+    <script>
+    
+    var btn = document.getElementById('chamar')
+    var res = document.getElementById('user')
+    
+    async function teste() {
+        
+        const text = document.getElementById('text')
+        
+        const user = text.value
+        const url = `https://api.github.com/users/${user}`
+        
+        const dados = await fetch(url)
+        const obj = await dados.json()
+        
+        res.innerHTML= 'o nome de usuario e :' + obj.name + '<br> mora em : '+ obj.location
+        return console.log(obj)
+        
+    }
+    
+    btn.addEventListener('click' , teste)
+    
+        
+    </script>
+
+</body>
+
+</html>

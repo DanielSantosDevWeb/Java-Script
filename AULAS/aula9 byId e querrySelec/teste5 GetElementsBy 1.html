@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Aprendendo o DOM </title>
+</head>
+
+<body>
+  <h1 name='nome'> Curso JavaScript</h1>
+  <p> Testando o <strong>DOM</strong></p>
+  <p> Segundo Paragrafo</p>
+
+
+
+    <script>
+      
+       var corpo = document.body // Adicionado a Tag body ao script
+       var p1 = document.getElementsByTagName('p')[0] // Adicionando a Tag p (paragrado) ao script
+       var p2 = document.getElementsByName('nome')[0]
+  
+       var nov = window.document.write('ola' + p2.innerText) // Mandando escrever a var p2 ao doc
+        
+       p1.style.color = 'blue'
+       p2.style.color ='red'
+       corpo.style.background='skyblue' // mudando o fundo da Tag corpo
+       
+    </script>
+
+</body>
+
+</html>

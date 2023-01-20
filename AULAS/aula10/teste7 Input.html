@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Calculando</title>
+   
+   <style>
+      input#nub1{
+         width: 50px; 
+         height: 30px;
+}     
+      input#nub2{
+         width: 50px;
+         height: 30px;
+      }
+      input#som{
+        width: 60px;
+        height: 36px;
+        font: normal 13pt arial;
+         
+      }
+      p#res{
+         width: 60px;
+         height: 50px;
+         line-height: 25px;
+         background: black;
+         color:white;
+         font: normal 19pt arial;
+         text-align: center;
+      }
+      
+      body{
+         background: deepskyblue;
+         font: normal 15pt arial;
+}
+      
+      
+   </style>
+   
+</head>
+
+<body>
+   <center>
+     <h1>Calculadora</h1>
+     <input type="number" name="nub1" id="nub1">+
+     <input type="number" name="nub2" id="nub2">=
+     <input type="button" value="SOMAR" id="som" onclick="clicar()">
+     
+     <p id="res">  </p>
+   </center>
+   
+   <script>
+      
+      function clicar() {
+         var tx1 = document.getElementById('nub1')
+         var tx2 = document.querySelector('input#nub2')
+         var re = document.getElementById('res')
+         var n1 = Number(tx1.value)
+         var n2 = Number(tx2.value)
+         var s = n1 + n2
+         
+         re.innerHTML=`${s}`
+         
+      }
+      
+      
+   </script>
+   
+   
+</body>
+
+</html>

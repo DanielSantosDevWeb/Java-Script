@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+   <style>
+      
+      div#cliki {
+         background: deepskyblue;
+         color: wheat;
+         width: 100px;
+         height: 100px;
+         line-height: 120px; 
+         text-align: center;
+
+      }
+      
+   </style>
+</head>
+
+<body>
+   <center>
+   <div id="cliki"  >clique em mim</div>
+   </center>
+      
+   <script>
+      var pa = document.getElementById('cliki')
+      
+      pa.addEventListener('click', clicou)
+      pa.addEventListener('mouseenter', entr)
+      pa.addEventListener('mouseout', saiu)
+      
+      
+      var corpo = document.body
+      
+      function clicou() {
+         
+        pa.style.background='red'
+      
+      }
+      
+      function fundo() {
+         
+         pa.style.background='blue'
+         
+      }
+   
+      
+      function entr() {
+         pa.style.background='skyblue'
+         
+         
+      }
+      
+      function saiu() {
+         
+         pa.style.background='deepskyblue'
+         
+      }
+      
+   </script>
+   
+</body>
+   
+
+   
+
+
+</html>

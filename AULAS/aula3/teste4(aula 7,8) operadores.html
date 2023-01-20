@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste 123</title>
+  <style> 
+    
+  body {
+       background-color: deepskyblue;
+       color : white;
+    
+  }
+  
+    
+    
+  </style>
+  
+</head>
+
+<body>
+  <center>
+     <h1>Ola mundo </h1>
+  
+     <p>oi meu chapa</p>
+  
+  </center>
+  
+  <script>
+
+    var nome = prompt('nome')
+    var nota = Number(prompt('nota'))
+    var es = String(prompt('estado'))
+    
+    var res = nota >= 6.9 ? 'aprovado' :'reprovado'
+    var sr = es == 'rj' || es == 'sp' ? 'rio e sao' : 'nao'
+    
+    document.write( `Ola ${nome} <br />` )
+    document.write(`Voce esta ${res} <br />` )
+    document.write(`voce mora em ${sr}`)
+    
+  </script>
+  
+
+
+</body>
+
+</html>

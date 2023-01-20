@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Aprendendo o DOM </title>
+</head>
+
+<body>
+  <h1 class="um"> Curso JavaScript</h1>
+  
+  <p id="para1"> Testando o <strong>DOM</strong></p> 
+  
+  <p id="para2"> Segundo Paragrafo</p>
+
+
+
+    <script>
+      
+       var corpo = document.body // Adicionado a Tag body ao script
+       var p1 = document.getElementById('para1')
+       var til = document.querySelector('h1.um') // class juncao com '.'
+       var p2 = document.querySelector('p#para2') // id junção com '#'
+       
+       var nov = window.document.write('ola ' + p1.innerHTML) // innerHTML escreve o comando
+        
+       til.style.background ='black' // mudando o fundo para black
+       til.style.color='white' // mudando a fonte para cor Branca 
+       p1.style.color = 'blue' 
+       p2.style.color ='red'
+       corpo.style.background='skyblue' // mudando o fundo da Tag corpo
+       //nov.style.background='green'
+    </script>
+
+</body>
+
+</html>

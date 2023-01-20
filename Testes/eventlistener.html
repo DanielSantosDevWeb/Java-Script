@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EventListener</title>
+</head>
+<body>
+    
+    <input type="button" value="click" id="botao">
+    <p>
+        <input type="text" name="" id="TextoCopy">
+        <input type="button" value="copia" id="copy">
+    </p>
+    
+    <div id="texto"></div>
+    
+    <div id="fundo"  style=" background: lightblue; height: 100px;">
+        texto copiado pelo EventListener
+    </div>
+    
+    <script>
+        
+        let botao = document.getElementById('botao')
+        let texto = document.querySelector('#texto')
+        var fundo = document.getElementById('fundo')
+        
+        var txtcopy = document.getElementById('TextoCopy')
+        var btncopy = document.getElementById('copy')
+        
+        btncopy.addEventListener('click' , ()=> {
+            txtcopy.select()
+            document.execCommand('copy')
+            alert('texto copiado' + txtcopy.value)
+        })
+        
+        
+        fundo.addEventListener('mouseout' , ()=> {
+            fundo.style.backgroundColor='blue'
+        })
+        
+        function onli() {
+            
+            addEventListener('offline', () => {
+                    window.alert('Você esta offline')
+                }
+            
+            )
+            addEventListener('online', () => {
+                    texto.innerHTML = 'online'
+                }
+            
+            )
+        }
+        addEventListener('load', onli)
+        
+    </script>
+</body>
+</html>

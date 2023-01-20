@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+</head>
+
+<body>
+    <input type="button" name="bbo" id="bbo" value="clic" />
+   
+   <div id="ola">
+      
+   </div>
+   <script>
+      
+         for ( var n1 = 0 ; n1 < 6; n1++ ) {
+            /*
+            var ola = document.getElementById('ola')
+            ola.innerHTML+=`${n1}`
+            */
+            
+            
+     // var body = document.getElementById('ola') // chamano o body
+            
+            
+            function inic() {  
+               
+               var divi = document.getElementById('ola')
+               var di = document.createElement('div') // Criou uma div 
+                   di.textContent+='testa' // adicionando uma string dentro da var di
+               
+              divi.appendChild(di) // adicionando a Var 'di' no body
+         
+            }
+      
+            addEventListener('load', inic) // evento para quando der load carregar a function
+            
+         }
+      
+      
+   </script>
+   
+
+</body>
+
+</html>

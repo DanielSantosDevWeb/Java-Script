@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste com Audii</title>
+    <style>
+        div {
+            background: blue;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Teste Com Audio</h1>
+    
+    <audio src="falamaluco.mp3" id="audio"> </audio>
+    
+    <input type="button" name="tocar" id="tocar" value="tocar" onclick="tocar()"}/>
+    
+    <div onclick="bateria()" >tocar</div>
+    
+    <script>
+        
+        function bateria() {
+            
+            let audio = document.getElementById('audio')
+            
+            audio.play()
+            
+        }
+        
+
+        function tocar() {
+            
+            let audio = document.getElementById('audio')  //adicionou a tag audio
+            
+            audio.currentTime = 0 // diminuir o tamanho do audio 
+            audio.play() // Danto play no audio
+            
+        }
+        
+    </script>
+    
+</body>
+</html>

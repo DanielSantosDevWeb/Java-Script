@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Touch Events</title>
+    
+    <style>
+        div {
+            background-color: cadetblue;
+            width: 300px;
+            height: 100px;
+            
+        }
+        body {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="divis">
+        Essa eh uma div feita para testar os eventos de touch pelo JavaScript
+    </div>
+    
+    <p>A</p>
+    
+    <script>
+        
+        var corpo = document.querySelector('body')
+        var divis = document.getElementById('divis')
+        var p = document.querySelector('p')
+        
+        function cordf() {
+            
+            corpo.addEventListener('touchstart', func1)
+            corpo.addEventListener('touchend', func2)
+            corpo.addEventListener('touchmove', func3)
+            corpo.addEventListener('touchcancel', func4)
+            
+            function func1() {
+                divis.style.backgroundColor = 'blue'
+                p.innerText+='tocou'
+            }
+            
+            function func2() {
+                divis.style.backgroundColor = 'red'
+                p.innerText+='saiu'
+            }
+            
+            function func3() {
+                divis.style.backgroundColor = 'black'
+                p.innerText+='deslizou'
+            }
+            function func4() {
+                divis.style.backgroundColor = 'yellow'
+                p.innerText+='marcou'
+            }
+        }
+        
+        addEventListener('load', cordf)
+        
+    </script>
+    
+
+</body>
+
+</html>

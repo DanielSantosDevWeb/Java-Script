@@ -1,0 +1,32 @@
+#graph { border: solid black 1px; }
+
+body {
+   background-color: goldenrod;
+   
+}
+img {
+   width:100px;
+   height: 100px;
+   border-radius: 20px;
+   margin: auto;
+}
+
+header {
+   text-align: center;
+}
+
+section#sec {
+   height: 100px;
+   width: 100px;
+   background-color: white;
+   margin: auto;
+   border-radius: 10px;
+   padding: 50px;
+
+}
+
+footer {
+   padding-block: 10px;
+   text-align: center ;
+}
+

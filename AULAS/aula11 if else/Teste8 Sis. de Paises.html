@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Sistema de pais</title>
+   <style type="text/css" media="all">
+      center#cen{
+         width: 200px;
+         height: 200px;
+         background-color: midnightblue;
+         color: white;
+         border-radius: 20px;
+         
+         line-height: 30px;
+         padding: 10px;
+         
+         margin: 10px;
+         
+         box-shadow: 10px 10px 15px midnightblue;
+         
+         
+      }
+      p {
+         font: normal 10pt arial;
+      }
+      body{
+         background: skyblue;
+         
+      }
+      div#div1 {
+         margin: 50px;
+         font: normal 30pt verdana;
+      }
+      p#hora {
+         color: white;
+      }
+      
+   </style>
+</head>
+
+<body>
+   <center>
+      <div id="div1"> Sistema de pais</div>
+   <center id="cen">
+      <p>
+         ● Sistema de Pais ●
+     </p>
+      <input type="text" name="txpais" id="txpais">
+      <input type="button" value="testar" id="tes" onclick="testar()">
+      <p id="res">Voce é </p>
+      <p id="hora">bom dia</p>
+      <p id="sema">semana </p>
+   
+   </center>
+   </center>
+   <script src="ifelse.js">
+      
+      
+      
+   </script>
+   <script>
+      var chamar = new Date()
+      var sem = chamar.getDay()
+      var txs = document.getElementById('sema')
+   
+      switch(sem) {
+         
+         case 0:
+            txs.innerHTML='Domingo'
+         break
+         
+         case 1:
+            txs.innerHTML='Segunda'
+            break
+         
+         case 2:
+            txs.innerHTML='Terça'
+            break
+         
+         case 3: 
+            txs.innerHTML='Quarta'
+            break
+         
+         case 4:
+            txs.innerHTML='Quinta'
+            break
+         
+         case 5:
+            txs.innerHTML='Sexta'
+            break
+         
+         case 6:
+            txs.innerHTML='Sabado'
+         
+
+      }
+      
+   </script>
+
+</body>
+
+</html>

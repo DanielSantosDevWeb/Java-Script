@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>verificador de idades</title>
+</head>
+
+<body>
+    
+    <input type="number" name="" id="idade">
+    <input type="button" value="adicionar" onclick="add()">
+    
+    <input type="button" value="mostrar" onclick="mostrar()">
+    
+    <div id="infos" >
+        
+    </div>
+    
+    
+    
+    <script>
+        
+        var crianca = [  ]
+        var adulto = [  ]
+        var idoso = [  ]
+        
+        function add() {
+            
+            let idaden = document.getElementById('idade')
+            
+            let idade = Number(idaden.value)
+            
+            if (idade <= 17 ) {
+                return crianca.push(idade)
+            } else if ( idade >= 18 && idade < 64) {
+                return adulto.push(idade) 
+            } else {
+                return idoso.push(idade)
+            }
+            
+            idaden.value=''
+            idaden.focus()
+            
+        }
+        
+        function mostrar() {
+              let info = document.getElementById('infos')
+            
+            for ( let pos in crianca ) {
+                
+                info.innerHTML+=`A crianca tem ${crianca[pos]} anos <br>`
+                
+            }
+            
+            for ( let pos in adulto) {
+                
+                info.innerHTML+=`O adulto tem ${adulto[pos]} anos<br>`
+            }
+            
+            for (let pos in idoso) {
+                
+                info.innerHTML=`O idoso tem ${idoso} anos <br>`
+            }
+          
+            info.innerHTML+=`<br> Crianças: ${crianca} Adultos: ${adulto } Idosos: ${idoso}`
+        }
+        
+    </script>
+
+</body>
+
+</html>

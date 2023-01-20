@@ -1,0 +1,42 @@
+body {
+   
+   background: whitesmoke;
+   
+}
+
+#info {
+   
+   text-align: center;
+}
+
+#corpo {
+   
+   background-color: darkblue;
+   width: 300px;
+   height: 500px;
+   padding: 5px;
+   color: floralwhite;
+
+   border-radius: 20px;
+   margin: 34px;
+   
+}
+
+#recebimento {
+   
+   background-color: whitesmoke;
+   height: 200px;
+   width: 200px;
+   padding: 10px;
+   margin: 10px;
+   margin-top: 30px;
+   color: black;
+   
+   
+}
+
+#resposta {
+   
+   text-align: center;
+   
+}

@@ -1,0 +1,22 @@
+
+
+.container {
+    width: 70%;
+    height: 200px;
+    background-color: skyblue;
+    margin: auto;
+    border-radius: 10px;
+    border: 10px;
+    border-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.resultados {
+    width: 80%;
+    height: 80px;
+    background-color: whitesmoke;
+    margin: auto;
+    padding-top: 10px;
+    
+}

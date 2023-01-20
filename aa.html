@@ -1,0 +1,1272 @@
+<html class="ui-mobile">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="Pragma" content="no-cache"> 
+  <meta http-equiv="Cache-control" content="no-cache"> 
+  <meta name="msapplication-tap-highlight" content="no"> 
+  <meta name="MobileOptimized" content="320"> 
+  <meta name="google" content="notranslate"> 
+  <meta name="csrf_param" content="wmn0PLOjBdNEFlT7Pv3nDR0a7MGJSZ6R"> 
+  <meta name="csrf_token" content="lDRyF3qZfdM3fXtD1hmjeAHvzzS01VxD"> 
+  <meta name="n" content="b8e1c4964a280c7f01e6b96602681b4a7eed9f03c9d3c18b81aad62684662ad3703a453b5d8cbe4947a19122c9db974d6b98bbb2d20b9609f95ada96c48482c68058e705dd43591c0aad19c9e20d8362c6730e7c237087c6b618fc20e9f4c6fbe2bfce2ea73cff34ce1ad3ba038dd07943105bb703ba25d98e8aa8c8ad3e14b989e482802a5f719a733e0983586c43d0d28604502e23970bddac38b2add9c3175d3a47b2445fe92f0ca27bec9f3a558a1e5b56437270dfc6648d7a7a90fbe2a49af3cb372efd45e2d8d3deeb6fff7b6a43ee5d6d574929de2344049875d50f4196ddd8fcf8812e040dd806fab02b7f8c7d1d9f30524e862455ad2259b9cf8031"> 
+  <meta name="e" content="010001"> 
+  <title></title> 
+  <link type="text/css" href="/small/css/cat_jqm.css.cgz?v=0.20221112233658WS7001-20-2.0.0.318_SP2C947" rel="stylesheet"> 
+  <script type="text/javascript">
+    var adaptUILayout = (function(){
+        var regulateScreen = (function(){
+            var cache = {};
+            var defSize = {
+                width  : window.screen.width,
+                height : window.screen.height
+            };
+            var ver = window.navigator.appVersion;
+            var _ = null;
+            var check = function(key){
+                return key.constructor == String ? ver.indexOf(key) > -1 : ver.test(key);
+            };
+            var add = function(name, key, size){
+                if(name && key)
+                    cache[name] = {
+                        key : key,
+                        size : size
+                    };
+            };
+            var del = function(name){
+                if(cache[name])
+                    delete cache[name];
+            };
+            var cal = function(){
+                if(_ != null)
+                    return _;
+                for(var name in cache){
+                    if(check(cache[name].key)){
+                        _ = cache[name].size;
+                        break;
+                    }
+                }
+                if(_ == null)
+                    _ = defSize;
+                return _;
+            };
+            return {
+                add : add,
+                del : del,
+                cal : cal
+            };
+        })();
+        var adapt = function(uiWidth){
+            var
+            deviceWidth,
+            devicePixelRatio,
+            targetDensitydpi,
+            //meta,
+            initialContent,
+            head,
+            viewport,
+            ua;
+            ua = navigator.userAgent.toLowerCase();
+            //whether it is the iPhone or iPad
+            isiOS = ua.indexOf('ipad') > -1 || ua.indexOf('iphone');
+            //��ȡ�豸��Ϣ,����������ֵ
+            devicePixelRatio = window.devicePixelRatio;
+            deviceWidth      = regulateScreen.cal().width;
+            //��ȡ����dpi
+            targetDensitydpi = uiWidth / deviceWidth * devicePixelRatio * 160;
+            //use viewport width attribute on the iPhone or iPad device
+            //use viewport target-densitydpi attribute on the Android device
+            initialContent   = isiOS
+                ? 'target-densitydpi=device-dpi, width=' + uiWidth + 'px, user-scalable=no'
+                : 'target-densitydpi=' + targetDensitydpi + ', width=device-width, user-scalable=no';
+
+            //add a new meta node of viewport in head node
+            head = document.getElementsByTagName('head');
+            viewport = document.createElement('meta');
+            viewport.name = 'viewport';
+            viewport.content = initialContent;
+            head.length > 0 && head[head.length - 1].appendChild(viewport);
+        };
+        return {
+            regulateScreen : regulateScreen,
+            adapt : adapt
+        };
+    })();
+    var ua = navigator.userAgent.toLowerCase();
+    if (Math.abs(window.orientation) != 90) {
+        if((ua.indexOf("iphone") >= 0)|| (ua.indexOf("iPad")>=0)){
+            adaptUILayout.adapt(810);
+        } else {
+            adaptUILayout.adapt(720);
+        }
+    } else {
+        adaptUILayout.adapt(1280);
+    }
+var g_Lang = new Array();
+g_Lang[0] = {lang:"zh", title:"Chinese Simplified"};
+g_Lang[1] = {lang:"en", title:"English"};
+g_Lang[2] = {lang:"es", title:"Spanish"};
+g_Lang[3] = {lang:"it", title:"Italian"};
+g_Lang[4] = {lang:"de", title:"German"};
+g_Lang[5] = {lang:"zh-TW", title:"Chinese Traditional of taiwan"};
+g_Lang[6] = {lang:"ar", title:"Arabia"};
+g_Lang[7] = {lang:"es-US", title:"Latin America"};
+g_Lang[8] = {lang:"ru", title:"Russian"};
+g_Lang[9] = {lang:"pt-BR", title:"Portuguese-BR"};
+g_Lang[10] = {lang:"nl", title:"Dutch"};
+g_Lang[11] = {lang:"pt", title:"Portuguese(European)"};
+g_Lang[12] = {lang:"fr", title:"French"};
+g_Lang[13] = {lang:"da", title:"Danish"};
+g_Lang[14] = {lang:"fi", title:"Finnish"};
+g_Lang[15] = {lang:"no", title:"Norwegian"};
+g_Lang[16] = {lang:"pl", title:"Polish"};
+g_Lang[17] = {lang:"sv", title:"Swedish"};
+g_Lang[18] = {lang:"ja", title:"Japanese"};
+g_Lang[19] = {lang:"cs", title:"Czech"};
+g_Lang[20] = {lang:"ro", title:"Romanian"};
+g_Lang[21] = {lang:"uk", title:"Ukrainian"};
+g_Lang[22] = {lang:"hu", title:"Hungarian"};
+g_Lang[23] = {lang:"bg", title:"Bulgarian"};
+g_Lang[24] = {lang:"sr", title:"Serbian"};
+g_Lang[25] = {lang:"ko", title:"Korean"};
+g_Lang[26] = {lang:"tr", title:"Turkish"};
+g_Lang[27] = {lang:"lt", title:"Lithuanian"};
+g_Lang[28] = {lang:"lv", title:"Latvia"};
+g_Lang[29] = {lang:"et", title:"Estonian"};
+g_Lang[30] = {lang:"mk", title:"Macedonia"};
+g_Lang[31] = {lang:"sl", title:"Slovenian"};
+g_Lang[32] = {lang:"sk", title:"Slovak"};
+g_Lang[33] = {lang:"hr", title:"Croatian"};
+g_Lang[34] = {lang:"he", title:"Hebrew"};
+g_Lang[35] = {lang:"el", title:"Greek"};
+g_Lang[36] = {lang:"th", title:"Thai"};
+g_Lang[37] = {lang:"vi", title:"Vietnamese"};
+g_Lang[38] = {lang:"id", title:"Indonesian"};
+g_Lang[39] = {lang:"fa", title:"Farsi"};
+g_Lang[40] = {lang:"sq", title:"Albania"};
+g_Lang[41] = {lang:"mt", title:"maltese"};
+g_Lang[42] = {lang:"ms", title:"malay"};
+g_Lang[43] = {lang:"en-GB", title:"English(British)"};
+
+var g_userLevel = 0;
+var g_userLang = "pt-BR";
+if(g_userLang == "zh-tw" || g_userLang == "zh-hk" || g_userLang == "pt-br" || g_userLang == "es-us" || g_userLang == "en-gb" || g_userLang == "bo-cn"){
+    var lang1 = g_userLang.substr(0,3);
+    var lang2 = g_userLang.substr(3).toUpperCase();
+    g_userLang = lang1+lang2
+}
+var g_userScram = 1;
+</script>
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=720px, user-scalable=no">
+ </head> 
+ <body class="startsUgly ui-body-a ui-mobile-viewport" style="width:100%;height:100%;"> 
+  <div id="indexpage" data-role="page" data-theme="a" data-dom-cache="true" style="display: block;"> 
+   <div id="switch_lang" style="margin-top:40px;padding-bottom:1px;width:100%;"> 
+    <table frame="void" rules="none" cellpadding="0" cellspacing="0">
+     <tbody>
+      <tr> 
+       <td>
+        <div id="show_curlang" style="font-size:26px;color:#666666;" onclick="showLangList()">
+         Português-BR
+        </div></td> 
+       <td id="langlist_image" class="paddingleft-14"> <img src="../res/spinner.png" width="15px" height="9px"> </td> 
+      </tr>
+     </tbody>
+    </table> 
+   </div> 
+   <div id="LangList_login_page" class="LangList hide"></div> 
+   <div data-role="content" style="" id="login_route"> 
+    <form method="post" data-ajax="false" id="login_route_form" class="login-form" ontouchend="utilPasswordTouchEnd(event, 'password_eyehidepwd_img', function(){utilShowEyePassword('password_eyeshowpwd_img','password_login','text_login','Password','Password_text')})" ontouchcancel="utilPasswordTouchEnd(event, 'password_eyehidepwd_img', function(){utilShowEyePassword('password_eyeshowpwd_img','password_login','text_login','Password','Password_text')})"> 
+     <div id="internet_status_image" style="position:relative;" align="center"> 
+      <img src="../res/ic_login_router.png" width="240px" height="240px"> 
+     </div> 
+     <div style="font-size:36px;width:100%;height:40px;text-align:center;color: black;line-height:40px">
+      <span id="Touch_login_routerlogin">Fazer login com a senha do roteador</span>
+     </div> 
+     <div id="password_login" style="margin-top:70px;"> 
+      <table frame="void" rules="none" cellpadding="0" cellspacing="0" class="ui-width_100p">
+       <tbody>
+        <tr> 
+         <td>
+          <div id="div_password" class="ui-input-middletext_eye_login"> 
+           <div class="ui-input-text ui-body-g ui-shadow-inset">
+            <input name="Password" id="Password" autocomplete="off" type="password" oncopy="return false;" oncut="return false;" oncontextmenu="return false;" placeholder="" value="" data-theme="g" class="ui-user-input-text-login forbid-long-press-select ui-input-text ui-body-g">
+           </div> 
+          </div></td> 
+         <td class="ui-width_88">
+          <div ontouchstart="utilShowEyePassword('password_eyehidepwd_img','password_login','text_login','Password_text','Password')">
+           <img src="../res/input_eyehide.png" id="password_eyehidepwd_img" class="ui-input-rightimg_eye_login marginleft-0-2">
+          </div></td> 
+        </tr>
+       </tbody>
+      </table> 
+     </div> 
+     <div id="text_login" style="display:none;margin-top:70px;"> 
+      <table frame="void" rules="none" cellpadding="0" cellspacing="0" class="ui-width_100p">
+       <tbody>
+        <tr> 
+         <td>
+          <div id="div_password_text" class="ui-input-middletext_eye_login"> 
+           <div class="ui-input-text ui-body-g ui-shadow-inset">
+            <input name="Password_text" id="Password_text" autocomplete="off" type="text" oncopy="return false;" oncut="return false;" oncontextmenu="return false;" placeholder="" value="" data-theme="g" class="ui-user-input-text-login forbid-long-press-select ui-input-text ui-body-g">
+           </div> 
+          </div></td> 
+         <td class="ui-width_88">
+          <div ontouchend="utilShowEyePassword('password_eyeshowpwd_img','password_login','text_login','Password','Password_text')">
+           <img src="../res/input_eyeshow.png" id="password_eyeshowpwd_img" class="ui-input-rightimg_eye_login marginleft-0-2">
+          </div></td> 
+        </tr>
+       </tbody>
+      </table> 
+     </div> 
+     <div id="first_login"> 
+      <table>
+       <tbody>
+        <tr>
+         <td class="text-align-left"> <label class="marginleft-0" style="color:#fb1319;font-size:22px;"><span id="login_warning"></span></label></td> 
+        </tr>
+       </tbody>
+      </table> 
+     </div> 
+     <div id="login_submit_btn" data-theme="g" class="ui-login-submit-btn"> 
+      <div id="route_submit_btn" class="ui-btnblue-middle-a ui-btnblue-middletext-a" style="float:none;"> 
+       <div class="ui-btn ui-input-btn ui-btn-f ui-btn-up-a">
+        <span class="ui-btn-inner"><span class="ui-btn-text">Fazer login</span></span>
+        <input type="submit" name="submit" id="submit" value="submit" data-disabled="false" class="ui-btn-hidden">
+       </div> 
+      </div> 
+     </div> 
+     <div style="clear:both;"></div> 
+     <div id="forgets_tips_route" style="margin:0 auto;margin-top:48px;font-size:26px;text-align:center;line-height: 48px;"> 
+      <div style="display:inline-block;"> 
+       <label id="route_login_forgetpwd"> <a style="color:#007dff" onclick="GoToForgetsGuidePage()"><span id="Touch_login_forgetps2">Esqueceu a senha?</span></a> </label> 
+      </div> 
+     </div> 
+     <div style="clear:both;"></div> 
+     <div id="login_choose_huawei_btn" style="margin: 48px auto 0px; font-size: 26px; text-align: center; line-height: 48px; display: none;"> 
+      <div class="text-align-right paddingright-20" style="display:inline-block;"> 
+       <label id="login_choose_route_btn"> <a style="color:#007dff" onclick="changePagelogintype('login_choose_huawei_btn')"><span id="Touch_login_huaweilogin">Missing translation: Touch.login.huaweilogin</span></a> </label> 
+      </div> 
+      <div class="text-align-right" style="display:inline-block;"> 
+       <label id="huawei_login_choose_or"><span id="Touch_login_or2">Missing translation: Touch.login.or</span></label> 
+      </div> 
+      <div class="text-align-left paddingleft-20" style="display:inline-block;"> 
+       <label style="width:48px;" id="huawei_route_login_forgetpwd"> <a style="color:#007dff" onclick="GoToForgetsGuidePage()"><span id="Touch_login_forgetps">Esqueceu a senha?</span></a> </label> 
+      </div> 
+     </div> 
+     <div style="min-height:50px;"></div> 
+    </form> 
+   </div> 
+   <div id="forgetps_view" class="hide"> 
+    <div style="font-size:36px;width:100%;text-align:center;color:#000000;margin-top:25px;">
+     <span id="Touch_login_forgetps1">Esqueceu a senha?</span>
+    </div> 
+    <div style="border-bottom:1px solid #c0c0c0;margin-top:25px;"></div> 
+    <div style="margin-left:32px;margin-right:32px;"> 
+     <div align="center" style="margin-top:60px;">
+      <div id="renew" class="router_renew_emui"></div>
+     </div> 
+     <div id="forgetps_info" style="margin-top:60px;"> 
+      <div style="font-size:34px;text-align:center;color:#000000;">
+       <span id="Touch_login_forgetps_restore">Redefinir o roteador</span>
+      </div> 
+      <div id="forgetps_guide" class="text-align-left" style="font-size:30px;color:#BBBBBB;margin-top:20px;margin-bottom:20px;">
+       Se você esquecer sua senha, poderá redefinir o roteador para as configurações de fábrica para redefinir a senha. Com o roteador conectado, pressione e segure o botão WPS/RESET por pelo menos 8 segundos, até que o indicador seja desligado. Siga as instruções para configurar o roteador novamente.
+      </div> 
+      <div class="text-align-left" style="font-size:30px;color:#fa0a0d;">
+       <span id="Touch_login_forgetps_warning">Se você restaurar as configurações padrão de fábrica, seus dados de configuração serão perdidos e sua senha voltará ao seu estado inicial e não criptografado. Somente pressione o botão Restaurar se necessário.</span>
+      </div> 
+     </div> 
+     <div id="back_to_login_footer" data-role="footer" data-theme="f" class="slideup ui-footer ui-footer-fixed" style="margin-bottom:50px;"> 
+      <div data-role="content" class="ui-content-init"> 
+       <div data-theme="f" class="ui-block-a ui-width_100p"> 
+        <div class="ui-btn-middle-b ui-btn-middletext-b" data-theme="f"> 
+         <div class="ui-btn ui-input-btn ui-btn-f">
+          <span class="ui-btn-inner"><span class="ui-btn-text"><span id="Touch_login_forgetps_back">OK</span></span></span>
+          <button type="button" data-theme="f" id="back_to_login_btn" onclick="BackToLogin()" class="ui-btn-hidden"><span id="Touch_login_forgetps_back"></span></button>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div style="min-height:200px;"></div> 
+   <div data-role="footer" id="indexpage_footer" data-position="fixed" class="slideup ui-footer ui-footer-fixed"> 
+    <div class="bottom" style="margin-bottom:24px;"> 
+     <table align="center">
+      <tbody>
+       <tr> 
+        <td class="paddingright-30" style="text-align:center;"><a id="privacy_link" href="/html/privacypolicy-pt-br_pt-br.html" onclick="showPrivatePage()" rel="noopener noreferrer" target="_blank"><span id="Touch_private">Declaração de privacidade</span></a></td> 
+        <td style="text-align:center;"><a class="change-pc-bottom">Área de trabalho</a></td> 
+        <td class="paddingleft-30" style="text-align:center;"><a id="opensource_link" href="/html/copyright.html" rel="noopener noreferrer" target="_blank"><span id="Touch_opensource">Declaração de código fonte aberto</span></a></td> 
+       </tr>
+      </tbody>
+     </table> 
+     <div>
+      <span id="Touch_copyright">Copyright © Huawei Device Co., Ltd. 2012-2022</span>
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="lead_app_page" data-role="page" data-theme="a" data-dom-cache="true" style="display: none;"> 
+   <div id="lead_app_page_top" data-role="content" style="height:900px;text-align:center;"> 
+    <div style="position:absolute;top:0;left:0;right:0;"> 
+     <img src="../res/leadapp_mobile.png" id="leadapp_mobile_img" style="width:100%;height:900px;" onclick="return false"> 
+    </div> 
+    <div id="Touch_lead_title" style="font-size:50px;color:#FFFFFF;position:relative;padding-top:100px;">
+     &nbsp;
+    </div> 
+    <div style="font-size:30px;color:#FFFFFF;opacity:0.8;margin-top:30px;position:relative;"> 
+     <span id="Touch_lead_app_tip">Use o aplicativo para gerenciar suas configurações de rede a qualquer momento e em qualquer lugar.</span> 
+    </div> 
+    <div align="center" style="position:relative;margin-top:80px;clear:both;width:100%;" onclick="open_smartapp()"> 
+     <img src="../res/leadapp_download.png" id="leadapp_download_img" style="width:600px;height:100px;"> 
+     <div style="font-size:40px;color:#FFFFFF;position:relative;margin-top:-80px;"> 
+      <span id="Touch_lead_app_download">Usar o aplicativo AI Life</span> 
+     </div> 
+    </div> 
+    <div id="Touch_lead_manual_manage" style="position:relative;font-size:36px;margin-top:60px;color:#FFFFFF;opacity:0.8;
+             text-decoration:underline;display:none;" onclick="ToGuide()">
+     暂不使用 App，开始配置
+    </div> 
+    <div align="center" id="leadapp_page_login" style="position:relative;display:none;margin-top:60px;"> 
+     <div id="leadapp_password_login" style="margin-top:70px;"> 
+      <table frame="void" rules="none" cellpadding="0" cellspacing="0" style="width:600px;height:60px;border-radius:50px;">
+       <tbody>
+        <tr> 
+         <td>
+          <div id="leadapp_div_password" class="ui-input-middletext_eye_leadapp_login" style="border-radius: 50px;height:80px;"> 
+           <div class="ui-input-text ui-body-g ui-shadow-inset">
+            <input name="leadapp_Password" id="leadapp_Password" style="margin-top: 10px;padding-top:12px;width:90%;" autocomplete="off" type="password" oncopy="return false;" oncut="return false;" oncontextmenu="return false;" placeholder="" value="" data-theme="g" class="leadapp_ui-user-input-text-login forbid-long-press-select ui-input-text ui-body-g">
+           </div> 
+          </div></td> 
+        </tr>
+       </tbody>
+      </table> 
+     </div> 
+     <div id="leadapp_first_login" style="display:none;padding-top:10px;position:relative;width:600px;" class="text-align-left"> 
+      <table>
+       <tbody>
+        <tr>
+         <td><img src="../res/learn_failed.png" width="32px" height="32px" class="paddingright-10" style="vertical-align:middle;"></td>
+         <td> <label id="leadapp_login_warning" name="" style="color:#ffffff;font-size:22px;opacity:0.8;"></label></td>
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+     <div id="leadapp_text_login" style="display:none;margin-top:70px;"> 
+      <table frame="void" rules="none" cellpadding="0" cellspacing="0" style="width:450px;height:60px;">
+       <tbody>
+        <tr> 
+         <td>
+          <div id="leadapp_div_password_text" class="ui-input-middletext_eye_leadapp_login"> 
+           <div class="ui-input-text ui-body-g ui-shadow-inset">
+            <input name="leadapp_Password_text" id="leadapp_Password_text" autocomplete="off" type="text" oncopy="return false;" oncut="return false;" oncontextmenu="return false;" placeholder="" value="" data-theme="g" class="leadapp_ui-user-input-text-login forbid-long-press-select ui-input-text ui-body-g">
+           </div> 
+          </div></td> 
+        </tr>
+       </tbody>
+      </table> 
+     </div> 
+     <div id="leadapp_login_submit_btn" data-theme="g" style="border-radius:50px;" class="leadapp_enter_btn" onclick="leadAppSubmit()"> 
+      <div id="lead_enter_mobile_img" style="width:600px;height:60px;font-size:35px;padding-top: 15px;" onclick="return false">
+       Fazer login
+      </div> 
+     </div> 
+     <div style="width:450px;height:80px;margin-top:20px;font-size:28px;color:#ffffff;opacity:0.8;"> 
+      <div style="text-decoration:underline;" onclick="leadapp_RestorePage()">
+       <span id="Touch_leadapp_forgetps">Esqueceu a senha?</span>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="lead_app_page_content" aligin="center" data-role="content" style="margin-top:96px;clear:both;margin:96px 32px 0 32px;text-align:center;"> 
+    <div id="Touch_lead_network" style="font-size:44px;color:#333333;">
+     Configuração simples
+    </div> 
+    <div style="font-size:30px;color:#333333;margin-top:20px;opacity:0.8;">
+     <span id="Touch_lead_network_tip">Feito para iniciantes. Recupere as credenciais de banda larga do seu roteador antigo com um único toque.</span>
+    </div> 
+    <div style="width:100%;margin:60px auto 96px auto;clear:both;"> 
+     <img style="width:560px;height:460px;" src="../../res/PC_network.png" id="PC_network_img" onclick="return false"> 
+    </div> 
+    <div style="font-size:44px;color:#333333;margin-top:96px;">
+     <span id="Touch_lead_remote">Gerenciamento remoto</span>
+    </div> 
+    <div style="font-size:30px;color:#333333;margin-top:20px;opacity:0.8;">
+     <span id="Touch_lead_remote_tip">Exiba sua rede doméstica a qualquer hora e em qualquer lugar por meio do aplicativo. Desconecte os invasores com um único toque.</span>
+    </div> 
+    <div style="width:100%;margin:60px auto 96px auto;clear:both;"> 
+     <img style="width:560px;height:460px;" src="../../res/PC_remote.png" id="PC_remote_img" onclick="return false"> 
+    </div> 
+    <div style="font-size:44px;color:#333333;margin-top:96px;">
+     <span id="Touch_lead_security">Proteção de segurança</span>
+    </div> 
+    <div style="font-size:30px;color:#333333;margin-top:20px;opacity:0.8;">
+     <span id="Touch_lead_security_tip">Identifique páginas de pagamento falsas, interrompa ataques de força bruta e bloqueie fraudes, cavalos de Troia e vírus.</span>
+    </div> 
+    <div style="width:100%;margin:60px auto 96px auto;clear:both;"> 
+     <img style="width:560px;height:460px;" src="../../res/PC_security.png" id="PC_security_img" onclick="return false"> 
+    </div> 
+    <div style="font-size:44px;color:#333333;margin-top:96px;">
+     <span id="Touch_lead_service">Serviços inteligente</span>
+    </div> 
+    <div style="font-size:30px;color:#333333;margin-top:20px;opacity:0.8;">
+     <span id="Touch_lead_service_tip">Aumente a largura de banda para uma jogabilidade mais uniforme. Gerencie facilmente o uso da Internet dos seus filhos. Receba cupons e cupons de desconto diariamente.</span>
+    </div> 
+    <div style="width:100%;margin:60px auto 96px auto;clear:both;"> 
+     <img style="width:560px;height:460px;" src="../../res/PC_service.png" id="PC_service_img" onclick="return false"> 
+    </div> 
+   </div> 
+   <div id="lead_app_page_footer" data-role="content" style="background-color:#436aaa;clear:both;font-size:26px;min-height:180px;width:100%;"> 
+    <table align="center" style="opacity:0.8;padding-top:20px;">
+     <tbody>
+      <tr> 
+       <td class="paddingright-30" style="text-align:center;"> <a id="guide_leadapp_privacy_link" class="hide" href="" onclick="showGuidePrivatePage()" rel="noopener noreferrer" target="_blank" style="color:#ffffff;"> <span id="Touch_private10">Declaração de privacidade</span> </a> <a id="login_leadapp_privacy_link" class="hide" href="/html/privacypolicy-pt-br_pt-br.html" onclick="showPrivatePage()" rel="noopener noreferrer" target="_blank" style="color:#ffffff;"> <span id="Touch_private11">Declaração de privacidade</span> </a> </td> 
+       <td style="text-align:center;"><a class="change-pc-bottom" style="color:#ffffff;">Área de trabalho</a></td> 
+       <td class="paddingleft-30" style="text-align:center;"> <a id="leadapp_opensource_link" href="/html/copyright.html" rel="noopener noreferrer" target="_blank" style="color:#ffffff;"> <span id="Touch_opensource10">Declaração de código fonte aberto</span> </a> </td> 
+      </tr>
+     </tbody>
+    </table> 
+    <div style="text-align:center;color:#ffffff;opacity:0.8;padding-top:50px;">
+     <span id="Touch_copyright10">Copyright © Huawei Device Co., Ltd. 2012-2022</span>
+    </div> 
+    <div style="border-top: 1px solid #ffffff; opacity:0.2; position:relative;margin-top:-60px;">
+     &nbsp;
+    </div> 
+   </div> 
+   <div id="leadapp_forgetps_view" class="hide"> 
+    <div style="font-size:36px;width:100%;text-align:center;color:#000000;margin-top:25px;">
+     <span id="Touch_login_forgetps10">Esqueceu a senha?</span>
+    </div> 
+    <div style="border-bottom:1px solid #c0c0c0;margin-top:25px;"></div> 
+    <div style="margin-left:32px;margin-right:32px;"> 
+     <div align="center" style="margin-top:60px;">
+      <div id="leadapp_renew" class="router_renew_emui"></div>
+     </div> 
+     <div id="leadapp_forgetps_info" style="margin-top:60px;"> 
+      <div style="font-size:34px;text-align:center;color:#000000;">
+       <span id="Touch_login_forgetps_restore10">Redefinir o roteador</span>
+      </div> 
+      <div id="lead_forgetps_guide" class="text-align-left" style="font-size:30px;color:#BBBBBB;margin-top:20px;margin-bottom:20px;">
+       Se você esquecer sua senha, poderá redefinir o roteador para as configurações de fábrica para redefinir a senha. Com o roteador conectado, pressione e segure o botão WPS/RESET por pelo menos 8 segundos, até que o indicador seja desligado. Siga as instruções para configurar o roteador novamente.
+      </div> 
+      <div class="text-align-left" style="font-size:30px;color:#fa0a0d;">
+       <span id="Touch_login_forgetps_warning10">Se você restaurar as configurações padrão de fábrica, seus dados de configuração serão perdidos e sua senha voltará ao seu estado inicial e não criptografado. Somente pressione o botão Restaurar se necessário.</span>
+      </div> 
+     </div> 
+     <div style="min-height:200px;">
+      &nbsp;
+     </div> 
+     <div id="leadapp_back_to_login_footer" data-role="footer" data-theme="f" class="slideup ui-footer ui-footer-fixed ui-bar-f" style="margin-bottom:50px;" role="contentinfo"> 
+      <div data-role="content" class="ui-content-init ui-content" role="main"> 
+       <div data-theme="f" class="ui-block-a ui-width_100p"> 
+        <div class="ui-btn-middle-b ui-btn-middletext-b" data-theme="f"> 
+         <div class="ui-btn ui-input-btn ui-btn-f ui-corner-all ui-shadow"> 
+          <span class="ui-btn-inner"> <span class="ui-btn-text"> <span id="Touch_login_forgetps_back10">OK</span> </span> </span> 
+          <button type="button" data-theme="f" id="leadapp_back_to_login_btn" onclick="leadapp_BackToLogin()" class="ui-btn-hidden"></button> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+var ua = navigator.userAgent.toLowerCase();
+if(ua.indexOf("huaweip6") >= 0){
+    if($("#home_footer")){
+        $("#home_footer").attr("data-position", "absolute");
+    }
+}
+function InitAdapt720(){
+    adaptUILayout.adapt(720);
+}
+function Resizewindow(){
+    var height;
+    if(!!(window.attachEvent && !window.opera))
+    {
+        height = document.documentElement.clientHeight;
+    }else{
+        height = window.innerHeight;
+    }
+    $("body").css("height",height-5);
+    $.mobile.activePage.css("min-height", height-5);
+    $.mobile.activePage.css("padding-bottom", "0px");
+}
+function isMustToBeSetViewport(){
+    var ua = navigator.userAgent.toLowerCase();
+    if ((ua.indexOf("iphone") >= 0) || ua.indexOf("firefox") >= 0 || ua.indexOf("huaweimediapad") >= 0 ||((ua.indexOf("android") >= 0) && (ua.indexOf("mediapad") < 0) && (ua.indexOf("firefox") < 0) && (ua.indexOf("huawei_c8860e") < 0)) ){
+        return true;
+    }
+    return false;
+}
+
+function checkInit(){
+    var ua = navigator.userAgent.toLowerCase();
+    if (isMustToBeSetViewport()) {
+        if (Math.abs(window.orientation) != 90) {
+            if((ua.indexOf("iphone") >= 0)|| (ua.indexOf("iPad")>=0)){
+                adaptUILayout.adapt(810);
+            } else {
+                adaptUILayout.adapt(720);
+            }
+        } else {
+            adaptUILayout.adapt(1280);
+        }
+    }else{
+        return;
+    }
+}
+
+function LanguageList(){
+    stopStatusTime = true;
+    var langlisthtml = "";
+    var langdescription = "";
+    var langsconent = Atp.LangsController.content;
+    for(var i = 0; i < langsconent.length; i++){
+        var selectedcolor = "#333";
+        var selectedshow = "display:none;";
+        var currentlang = langsconent[i]["lang"];
+        if(g_userLang == currentlang){
+            selectedcolor = "#1FAFFF";
+            selectedshow = "";
+        }
+        langdescription = Em.I18n.get("Touch.lang." + currentlang);
+        langlisthtml += '<a id="list_selectlang" href="javascript:void(0)" onclick="changeLang(\''+ currentlang +'\')">';
+        langlisthtml += '<div class="ui-title-h3 text-align-left" style="height:96px;color:' + selectedcolor + ';">';
+        langlisthtml += '<div class="wrap-type-96">';
+        langlisthtml += '<div class="line-height-96" style="direction:ltr;">' + langdescription  + '</div></div>';
+        langlisthtml += '<div id="selected_lang" style="width:40px;line-height:96px;' + selectedshow + '"><img src="../res/list_toolbar_finishl_gray.png" width="40px" height="27px"/></div>';
+        langlisthtml += '</div></a>';
+    }
+    $(".LangList").html(langlisthtml);
+}
+
+function changeLang(currentlang){
+    var lang_obj = { "Language": currentlang};
+    var csrf_obj = utilGetCsrf();
+    var post_data = {
+        "csrf": csrf_obj,
+        "data": lang_obj
+    };
+    Cookies.remove('Language');
+    Cookies.set('Language', lang_obj.Language , {expires: 365, path: '/'});
+    var currenthash = langListhref;
+    jQuery.ajax({
+        url: "/api/language/lang",
+        type: "POST",
+        data: JSON.stringify(post_data),
+        dataType: "json",
+        contentType:"application/json;charset=UTF-8",
+        complete:function(xmlhttprequest, textstatus){
+            window.location.href = window.location.pathname + currenthash;
+            window.location.reload();
+        }
+    });
+}
+
+function listenting(){
+    window.addEventListener("popstate", function(e){
+        langlist = false;
+        if($("#LangList_guide_page, #LangList_app_page, #LangList_home_page, #LangList_wizard_page").css("display") == "block"){
+            setTimeout(function(){
+                $('#logout-home, #logout-mini-app, .logout-mini, #goback-mimi-guide, #goback-mini-wizard, #more-home, #more-app, #more-wizard, #goback-mimi-guide').show();
+            },200);
+        }
+    }, false);
+}
+
+$(window).bind("orientationchange", function( event ) {
+    if(window.orientation == 0 || window.orientation == 180) {
+      event.orientation = "portrait"
+    }else {
+      event.orientation = "landscape"
+    }
+    if(isMustToBeSetViewport()){
+        if(event.orientation){
+            var ua = navigator.userAgent.toLowerCase();
+            if(event.orientation == 'portrait'){
+                if((ua.indexOf("iphone") >= 0)|| (ua.indexOf("iPad")>=0)){
+                    adaptUILayout.adapt(810);
+                } else {
+                    adaptUILayout.adapt(720);
+                }
+            }
+            else if(event.orientation == 'landscape') {
+                if((ua.indexOf("iphone") >= 0)|| (ua.indexOf("iPad")>=0)){
+                    adaptUILayout.adapt(810);
+                } else {
+                    adaptUILayout.adapt(1280);
+                }
+            }
+       }
+    }
+});
+
+var readyOnceTime = 0;
+var langlist = false;
+var langListhref = "";
+var domainObj = null;
+$(document).ready(function(){
+    Atp.DeviceInfoController.load();
+    if(window.location.href.indexOf("home.html") < 0){
+    }
+    Atp.LangsController.setContent(g_Lang);
+    if(!Atp.LangsController.isMultiLan){
+        $(".change-lang").addClass("hide");
+        $("#switch_lang").addClass("hide");
+        $("#guide_switch_lang").addClass("hide");
+        $(".change-pc").removeClass("more_top").addClass("more_radius");
+    }
+    setInterval(Resizewindow,200);
+    if (0 == readyOnceTime){
+        readyOnceTime = 1;
+        $.mobile.page.prototype.options.domCache = true;
+        $("#Touch_login_routerlogin").html(Em.I18n.get("Touch.login.routerlogin"));
+$("#Touch_login_forgetps2").html(Em.I18n.get("Touch.login.forgetps"));
+$("#Touch_login_huaweilogin").html(Em.I18n.get("Touch.login.huaweilogin"));
+$("#Touch_login_or2").html(Em.I18n.get("Touch.login.or"));
+$("#Touch_login_forgetps").html(Em.I18n.get("Touch.login.forgetps"));
+$("#Touch_login_forgetps1").html(Em.I18n.get("Touch.login.forgetps"));
+$("#Touch_login_forgetps_restore").html(Em.I18n.get("Touch.login.forgetps.restore"));
+$("#Touch_login_forgetps_guide").html(Em.I18n.get("Touch.login.forgetps.guide"));
+$("#Touch_login_forgetps_warning").html(Em.I18n.get("Touch.login.forgetps.warning"));
+$("#Touch_login_forgetps_back").html(Em.I18n.get("Touch.login.forgetps.back"));
+$("#Touch_private").html(Em.I18n.get("Touch.private"));
+$("#Touch_opensource").html(Em.I18n.get("Touch.opensource"));
+$("#Touch_copyright").html(Em.I18n.get("Touch.copyright"));
+$("#Touch_lead_app_tip").html(Em.I18n.get("Touch.lead.app.tip"));
+$("#Touch_lead_app_download").html(Em.I18n.get("Touch.lead.app.download"));
+$("#Touch_lead_manual_manage").html(Em.I18n.get("Touch.lead.manual.manage"));
+$("#Touch_leadapp_forgetps").html(Em.I18n.get("Touch.leadapp.forgetps"));
+$("#Touch_lead_network").html(Em.I18n.get("Touch.lead.network"));
+$("#Touch_lead_network_tip").html(Em.I18n.get("Touch.lead.network.tip"));
+$("#Touch_lead_remote").html(Em.I18n.get("Touch.lead.remote"));
+$("#Touch_lead_remote_tip").html(Em.I18n.get("Touch.lead.remote.tip"));
+$("#Touch_lead_security").html(Em.I18n.get("Touch.lead.security"));
+$("#Touch_lead_security_tip").html(Em.I18n.get("Touch.lead.security.tip"));
+$("#Touch_lead_service").html(Em.I18n.get("Touch.lead.service"));
+$("#Touch_lead_service_tip").html(Em.I18n.get("Touch.lead.service.tip"));
+$("#Touch_private10").html(Em.I18n.get("Touch.private"));
+$("#Touch_private11").html(Em.I18n.get("Touch.private"));
+$("#Touch_opensource10").html(Em.I18n.get("Touch.opensource"));
+$("#Touch_copyright10").html(Em.I18n.get("Touch.copyright"));
+$("#Touch_login_forgetps10").html(Em.I18n.get("Touch.login.forgetps"));
+$("#Touch_login_forgetps_restore10").html(Em.I18n.get("Touch.login.forgetps.restore"));
+$("#Touch_login_forgetps_guide10").html(Em.I18n.get("Touch.login.forgetps.guide"));
+$("#Touch_login_forgetps_warning10").html(Em.I18n.get("Touch.login.forgetps.warning"));
+$("#Touch_login_forgetps_back10").html(Em.I18n.get("Touch.login.forgetps.back"));
+
+        $.mobile.ajaxEnabled = false;
+        if(window.location.href.indexOf("guide.html") >=0){
+            Atp.GuideHeartbeatController.ontime();
+        }else
+        {
+            if(window.location.href.indexOf("wizard") >= 0){
+                Atp.HeartbeatController.bRefresh = false;
+            }else if(window.location.href.indexOf("appdetails") >= 0){
+                Atp.HeartbeatController.bRefresh = false;
+            }else if(window.location.href.indexOf("wlanauthorizeredirect") >= 0){
+                Atp.HeartbeatController.bRefresh = false;
+            }else{
+                Atp.HeartbeatController.bRefresh = true;
+                Atp.HeartbeatController.ontime();
+            }
+        }
+        setTimeout(function(){$(".startsUgly").show();}, 200);
+    }
+    Atp.LogOutController = Atp.SingleObjController.extend ({
+        objName : 'system/user_logout'
+    });
+    $('#logout-home, #logout-mini-app, .logout-mini').bind("click",function(){
+        var csrf = utilGetCsrf();
+        Atp.LogOutController.postData(csrf,function(){
+            window.location.href = "/small/html/index.html";
+        });
+    });
+    $('#goback-mimi-guide, #goback-mini-wizard').bind("click",function(){
+        window.history.back();
+    });
+    //$('#logout, .logout-mini').text(Em.I18n.get('Touch.logout'));
+    $('#more-guide, #more-home, #more-app, #more-wizard').bind("click",function(e){
+        var selectLangText = Em.I18n.get("Touch.lang." + g_userLang);
+        $(".change-lang").html(selectLangText);
+        $(".more_action").toggle();
+        e.stopPropagation();
+    });
+    $('.change-lang').bind("click",function(e){
+        listenting();
+        var currenthref = window.location.hash;
+        var index = $(this).attr("id").indexOf("_");
+        var lastindex = $(this).attr("id").lastIndexOf("_");
+        var page = $(this).attr("id").substring(index + 1,lastindex);
+        langListhref = currenthref;
+        langlist = true;
+        utilchangePage("LangList_" + page + "_page");
+        $('#logout-home, #logout-mini-app, .logout-mini, #goback-mini-wizard, #more-home, #more-app, #more-wizard, .more_action').hide();
+        e.stopPropagation();
+    });
+    $('.change-pc-bottom, .change-pc').bind("click",function(e){
+        Atp.GuideController.load(function(){
+            var isguide = Atp.GuideController.content.guide;
+            if(isguide == false){
+                window.location.href = "/html/index.html#/welcome";
+            }
+            else{
+                if(g_userLevel == 0){
+                    window.location.href = "/html/index.html#/login";
+                }else{
+                    window.location.href = "/html/index.html#/home";
+                }
+            }
+        })
+        e.stopPropagation();
+    });
+    $(":password").on("click",function(e) {
+        var $this = $(this);
+        e.preventDefault();
+        setTimeout(function(){
+            $(window).scrollTop($this.offset().top-10);
+        }, 500);
+    });
+    $(":text").on("click",function(e) {
+        var $this = $(this);
+        e.preventDefault();
+        setTimeout(function(){
+            $(window).scrollTop($this.offset().top-10);
+        }, 500);
+    });
+    $(document).bind("click",function(e){
+        $(".more_action").hide();
+    });
+    $('.change-pc-bottom, .change-pc').text(Em.I18n.get('Touch.pcUI'));
+    domainGet(function(res) {
+        domainObj = res;
+        if(typeof $("#download_huawei_partner")[0] != "undefined"){
+            $("#download_huawei_partner")[0].href = domainObj.smarthome;
+        }
+        if(typeof $(".repeater_download_smart")[0] != "undefined") {
+            $(".repeater_download_smart")[0].href = domainObj.smarthome;
+        }
+    });
+});
+</script> 
+  <script type="text/javascript">
+var isLoginClick = false;
+var id_warning = isShowLeadAppPage ? "leadapp_login_warning" : "login_warning";
+var id_first = isShowLeadAppPage ? "leadapp_first_login" : "first_login";
+$(function(){
+    "use strict";
+    function parseBoolean(str){
+        if (str == "true"){
+            return true;
+        }
+        return false;
+    }
+    Atp.HeartbeatController.bRefresh = false;
+    getdeviceinfo(function(){
+        $("#Touch_lead_title").html(Em.I18n.get('Touch.lead.title',{arg1:document.title}));
+    });
+    $("#submit").prev('span').find('span.ui-btn-text').text(Em.I18n.get('Touch.login.login'));
+    $("#leadapp_login_submit_btn").find('div').text(Em.I18n.get('Touch.login.login'));
+    if (isWpsResetKey) {
+        $("#forgetps_guide").html(Em.I18n.get('Touch.login.forgetps.guide_wps'));
+        $("#lead_forgetps_guide").html(Em.I18n.get('Touch.login.forgetps.guide_wps'));
+    }
+    Atp.GetEncController = Atp.SingleObjController.extend ({
+        objName: 'system/encpubkey',
+        afterLoad:function(){
+            storagePubkey(this.content.EncpubkeyN,this.content.EncpubkeyE);
+        }
+    });
+    Atp.OldUserLoginController = Atp.SingleObjController.extend({
+        objName: "system/user_login",
+        retryTimes: 0,
+        errCsrfProc: function(result){},
+        createSubmitData: function(action, data){
+            var post_data = {
+                "csrf": this.getCsrf(),
+                "action": action,
+                "data": data
+            };
+            return JSON.stringify(post_data);
+        },
+        login: function(data){
+            var self = this;
+            if (self.retryTimes > 5){
+                self.retryTimes = 0;
+                $("#"+id).html(Em.I18n.get("Touch.login.notice"));
+                $("#"+id_first).show();
+                return;
+            }
+            self.retryTimes = self.retryTimes + 1;
+            this.postData(data, function(result){
+                if (result.errcode == 1){
+                    Atp.UserLoginController.updateCsrf(result);
+                    self.login(data);
+                }
+                else{
+                    self.retryTimes = 0;
+                    if ("ok" == result['errorCategory']){
+                        Atp.GetEncController.load(function(){
+                            window.location.href = "/small/html/home.html#home_page";
+                        });
+                    }
+                    else{
+                        var fail_wait_time = result["waitTime"];
+                        var fail_lock_time = 3;
+                        isShowLeadAppPage ? $("#leadapp_Password").val("") : $("#Password").val("");
+                        if(result["ishilink"]){
+                            if(result['errorCategory'] == "user_pass_err"){
+                                $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                            }else{
+                                $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                            }
+                        }else{
+                            if(result['errorCategory'] == "user_pass_err"){
+                                $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]}));
+                            }else{
+                                $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time}));
+                            }
+                        }
+                        $("#"+id_first).show();
+                    }
+                }
+            });
+        }
+    });
+    Atp.UserLoginController = Atp.SingleObjController.extend({
+        objName: "system/user_login_nonce",
+        retryTimes: 0,
+        loginSuccess:false,
+        errCsrfProc: function(result){},
+        login: function(){
+            var self = this;
+            if (self.retryTimes > 5){
+                self.retryTimes = 0;
+                $("#"+id_warning).html(Em.I18n.get("Touch.login.notice"));
+                $("#"+id_first).show();
+                return;
+            }
+            self.retryTimes = self.retryTimes + 1;
+            var nonceData = {};
+            var scram = CryptoJS.SCRAM({
+                            keySize: 8
+                        });
+            var firstNonce = scram.nonce().toString();
+            nonceData.username = Atp.UserCountController.getLoginUserName();
+            var password = isShowLeadAppPage ? $("#leadapp_Password").val() : $("#Password").val();
+            nonceData.firstnonce = firstNonce;
+            self.postData(nonceData, function(result){
+                if (result.errcode == 1 && !self.loginSuccess){
+                    Atp.UserLoginController.updateCsrf(result);
+                    self.login();
+                }
+                else if (0 == result['err']) {
+                    var salt = CryptoJS.enc.Hex.parse(result['salt']);
+                    var iter = result['iterations'];
+                    var finalNonce = result['servernonce'];
+                    var authMsg = firstNonce + "," + finalNonce + "," + finalNonce;
+                    var saltPassword = scram.saltedPassword(password,salt,iter).toString();
+                    var serverKey = scram.serverKey(CryptoJS.enc.Hex.parse(saltPassword));
+                    var clientKey = scram.clientKey(CryptoJS.enc.Hex.parse(saltPassword)).toString();
+                    var storekey = scram.storedKey(CryptoJS.enc.Hex.parse(clientKey));
+                    storekey = storekey.toString();
+                    var clientsignature = scram.signature(CryptoJS.enc.Hex.parse(storekey), authMsg);
+                    clientsignature = clientsignature.toString();
+                    clientsignature = CryptoJS.enc.Hex.parse(clientsignature);
+                    clientKey = CryptoJS.enc.Hex.parse(clientKey);
+                    for (var i = 0; i < clientKey.sigBytes/4; i++) {
+                        clientKey.words[i] = clientKey.words[i] ^ clientsignature.words[i]
+                    }
+                    self.objName = "system/user_login_proof";
+                    var profdata = {}
+                    profdata.clientproof = clientKey.toString();
+                    profdata.finalnonce = finalNonce;
+                    self.postData(profdata, function (result) {
+                        self.objName = "system/user_login_nonce";
+                        console.log(result);
+                        self.retryTimes = 0;
+                        if (0 == result['err']){
+                            self.loginSuccess = true;
+                            var serverProof = scram.serverProof(password, salt, iter, authMsg);
+                            serverProof = serverProof.toString();
+                            if (serverProof == result['serversignature']){
+                                var publicKey = result["rsan"];
+                                var publicKeySignature = scram.signature(CryptoJS.enc.Hex.parse(publicKey), serverKey);
+                                publicKeySignature = publicKeySignature.toString();
+                                if (result["rsapubkeysignature"] == publicKeySignature){
+                                    storagePubkey(result["rsan"],result["rsae"]);
+                                    window.location.href = "/small/html/home.html";
+                                }else{
+                                    self.loginSuccess = false;
+                                    isLoginClick = false;
+                                    console.log("rsa signature error");
+                                }
+                            }else{
+                                self.loginSuccess = false;
+                                isLoginClick = false;
+                                console.log("server signature error");
+                            }
+                        }else if (1 != result['err'] && 1 != result['errcode']){
+                            var fail_wait_time = result["waitTime"];
+                            var fail_lock_time = 3;
+                            isShowLeadAppPage ? $("#leadapp_Password").val("") : $("#Password").val("");
+                            isLoginClick = false;
+                            self.loginSuccess = false;
+                            $("#div_password").addClass("ui-input-middletext_eye_err_login");
+                            $("#div_password").removeClass("ui-input-middletext_eye_login");
+                            $("#password_eyehidepwd_img").addClass("ui-input-rightimg_eye_err_login");
+                            $("#password_eyehidepwd_img").removeClass("ui-input-rightimg_eye_login");
+                            $("#div_password_text").addClass("ui-input-middletext_eye_err_login");
+                            $("#div_password_text").removeClass("ui-input-middletext_eye_login");
+                            $("#password_eyeshowpwd_img").addClass("ui-input-rightimg_eye_err_login");
+                            $("#password_eyeshowpwd_img").removeClass("ui-input-rightimg_eye_login");
+                            if(result["ishilink"]){
+                                if(result['errorCategory'] == "user_pass_err"){
+                                    $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                                }else{
+                                    $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                                }
+                            }else{
+                                if(result['errorCategory'] == "user_pass_err"){
+                                    $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]}));
+                                }else{
+                                    $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time}));
+                                }
+                            }
+                            $("#"+id_first).show();
+                        }
+                    });
+                }else if (1 != result['err'] && 1 != result['errcode']){
+                    var fail_wait_time = result["waitTime"];
+                    var fail_lock_time = 3;
+                    isShowLeadAppPage ? $("#leadapp_Password").val("") : $("#Password").val("");
+                    isLoginClick = false;
+                    self.loginSuccess = false;
+                    $("#div_password").addClass("ui-input-middletext_eye_err_login");
+                    $("#div_password").removeClass("ui-input-middletext_eye_login");
+                    $("#password_eyehidepwd_img").addClass("ui-input-rightimg_eye_err_login");
+                    $("#password_eyehidepwd_img").removeClass("ui-input-rightimg_eye_login");
+                    $("#div_password_text").addClass("ui-input-middletext_eye_err_login");
+                    $("#div_password_text").removeClass("ui-input-middletext_eye_login");
+                    $("#password_eyeshowpwd_img").addClass("ui-input-rightimg_eye_err_login");
+                    $("#password_eyeshowpwd_img").removeClass("ui-input-rightimg_eye_login");
+                    if(result["ishilink"]){
+                        if(result['errorCategory'] == "user_pass_err"){
+                            $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                        }else{
+                            $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time})+" "+Em.I18n.get("Touch.login.samewithrepeater"));
+                        }
+                    }else{
+                        if(result['errorCategory'] == "user_pass_err"){
+                            $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_lock_time-result["count"]}));
+                        }else{
+                            $("#"+id_warning).html(Em.I18n.get("Touch.login." + result['errorCategory'], {arg1: fail_wait_time}));
+                        }
+                    }
+                    $("#"+id_first).show();
+                }
+            });
+        }
+    });
+    Atp.UserCountController = Atp.MultiObjController.extend({
+        objName: "system/useraccount",
+        ADMIN_LEVEL: 2,
+        getLoginUserName: function(){
+            for (var i = 0; i < this.content.length; i++){
+                if (this.content[i].userlevel == this.ADMIN_LEVEL){
+                    return this.content[i].username;
+                }
+            }
+            return "admin";
+        },
+        afterLoad: function(){
+            if(isShowLeadAppPage){
+                $("#leadapp_Password").attr("placeholder", Em.I18n.t("Touch.leadapp.placeholder"));
+                $("#leadapp_Password_text").attr("placeholder", Em.I18n.t("Touch.leadapp.placeholder"));
+            }else{
+                $("#Password").attr("placeholder", Em.I18n.t("Touch.login.placeholderpwd"));
+                $("#Password_text").attr("placeholder", Em.I18n.t("Touch.login.placeholderpwd"));
+            }
+        }
+    });
+    Atp.UserCountController.load();
+    $("#login_route").show();
+    $("#login_huawei").hide();
+    $("#login_choose_huawei_btn").hide();
+    if(isShowLeadAppPage){
+        $("#indexpage").hide();
+        $("#lead_app_page").show();
+        $("#leadapp_page_login").show();
+        $("#login_leadapp_privacy_link").show();
+    }else{
+        $("#indexpage").show();
+        $("#lead_app_page").hide();
+        $("#forgets_tips_route").show();
+    }
+    $("#indexpage_footer").attr("data-position", "fixed");
+    $("#indexpage_footer").addClass("slideup ui-footer ui-footer-fixed");
+    showPrivatePage();
+});
+
+$('form').on('submit', function (e) {
+    var $this = $(this);
+    //prevent the form from submitting normally
+    e.preventDefault();
+    //show the default loading message while the $.post request is sent
+    if($this[0].id.indexOf("route") >= 0){
+        if($("#Password").val() == ""){
+            return;
+        }
+        $("#login_warning").html("");
+        $("#first_login").hide();
+        $("#div_password").removeClass("ui-input-middletext_eye_err_login");
+        $("#div_password").addClass("ui-input-middletext_eye_login");
+        $("#password_eyehidepwd_img").removeClass("ui-input-rightimg_eye_err_login");
+        $("#password_eyehidepwd_img").addClass("ui-input-rightimg_eye_login");
+        $("#div_password_text").removeClass("ui-input-middletext_eye_err_login");
+        $("#div_password_text").addClass("ui-input-middletext_eye_login");
+        $("#password_eyeshowpwd_img").removeClass("ui-input-rightimg_eye_err_login");
+        $("#password_eyeshowpwd_img").addClass("ui-input-rightimg_eye_login");
+        if(isLoginClick || Atp.UserLoginController.loginSuccess){
+            return;
+        }
+        isLoginClick = true;
+        setTimeout(function(){
+            isLoginClick = false;
+        },3000);
+        if (1 == g_userScram)
+        {
+            Atp.UserLoginController.login();
+        }
+        else
+        {
+            var data = $this.serializeObject();
+            data.UserName = Atp.UserCountController.getLoginUserName();
+            var csrf_obj = utilGetCsrf();
+            var plaintPwd = data.UserName + base64Encode(SHA256(data.Password)) + csrf_obj.csrf_param +csrf_obj.csrf_token;
+            data.Password = SHA256(plaintPwd);
+            data.LoginFlag = 1;
+            if(Atp.UserCountController.content[0].FirstLogin == 0){
+                data.SetFirst = 1;
+            }
+            Atp.OldUserLoginController.login(data);
+        }
+    } else {
+        if($("#huawei_account").val() == "" || $("#huawei_Password").val() == ""){
+            return;
+        }
+        $("#huawei_login_warning").html("");
+        $("#huawei_first_login").hide();
+        $("#huawei_div_account").removeClass("ui-input-middletext-err_login");
+        $("#huawei_div_account").addClass("ui-input-middletext-login");
+        $("#huawei_div_password").removeClass("ui-input-middletext_eye_err_login");
+        $("#huawei_div_password").addClass("ui-input-middletext_eye_login");
+        $("#huawei_password_eyehidepwd_img").removeClass("ui-input-rightimg_eye_err_login");
+        $("#huawei_password_eyehidepwd_img").addClass("ui-input-rightimg_eye_login");
+        $("#huawei_div_password_text").removeClass("ui-input-middletext_eye_err_login");
+        $("#huawei_div_password_text").addClass("ui-input-middletext_eye_login");
+        $("#huawei_password_eyeshowpwd_img").removeClass("ui-input-rightimg_eye_err_login");
+        $("#huawei_password_eyeshowpwd_img").addClass("ui-input-rightimg_eye_login");
+        if(isLoginClick){
+            return;
+        }
+        isLoginClick = true;
+        setTimeout(function(){
+            isLoginClick = false;
+        },10000);
+        Atp.HuaweiLoginController.loginAction();
+    }
+});
+
+function leadAppSubmit(){
+    var $this = $(this);
+    if($("#leadapp_Password").val() == ""){
+        return;
+    }
+    if(isLoginClick || Atp.UserLoginController.loginSuccess){
+        return;
+    }
+    isLoginClick = true;
+    setTimeout(function(){
+        isLoginClick = false;
+    },3000);
+    if (1 == g_userScram)
+    {
+        Atp.UserLoginController.login();
+    }
+    else
+    {
+        var data = {};
+        data.Password = $("#leadapp_Password").val();
+        data.Password_text = $("#leadapp_Password").val();
+        data.UserName = Atp.UserCountController.getLoginUserName();
+        var csrf_obj = utilGetCsrf();
+        var plaintPwd = data.UserName + base64Encode(SHA256(data.Password)) + csrf_obj.csrf_param +csrf_obj.csrf_token;
+        data.Password = SHA256(plaintPwd);
+        data.LoginFlag = 1;
+        if(Atp.UserCountController.content[0].FirstLogin == 0){
+            data.SetFirst = 1;
+        }
+        Atp.OldUserLoginController.login(data);
+    }
+}
+function leadapp_RestorePage(){
+    $("#lead_app_page_top").hide();
+    $("#lead_app_page_content").hide();
+    $("#lead_app_page_footer").hide();
+    Atp.DeviceInfoController.load(function(){
+        $("#leadapp_renew").removeClass("router_renew_emui").addClass(Atp.DeviceInfoController.Touchui_GuideRenewClass);
+        $("#leadapp_forgetps_view").show();
+    });
+}
+function leadapp_BackToLogin(){
+    $("#lead_app_page_top").show();
+    $("#lead_app_page_content").show();
+    $("#lead_app_page_footer").show();
+    $("#leadapp_forgetps_view").hide();
+}
+function open_smartapp(){
+    var loadDateTime = new Date();
+    var download_url = domainObj.smarthome;
+    var ifrSrc = "hilink://smarthome.huawei.com";
+    var visibilityChange = "pagehide"; 
+    var userAgent = navigator.userAgent;
+    var str = userAgent.substr(userAgent.indexOf("Safari"),userAgent.length);
+    var issafariBrowser = /Safari/.test(userAgent) && !/Chrome/.test(userAgent) && (str.indexOf(" ") < 0);
+    window.location.href=ifrSrc;
+    var t = window.setTimeout(function() {
+        var timeOutDateTime = new Date();
+        if (timeOutDateTime - loadDateTime < 2050) {
+            window.location = download_url;
+        }
+    }, 2000);
+    window.onblur = function() {
+        clearTimeout(t);
+    }
+    if(issafariBrowser){
+        window.addEventListener("focus", function(){
+            var f = window.setTimeout(function(){
+                window.location.href = download_url;
+            },1500);
+        }, false);
+    }
+    if (typeof document.hidden !== "undefined") {
+        visibilityChange = "visibilitychange";
+    } else if (typeof document.mozHidden !== "undefined") {
+        visibilityChange = "mozvisibilitychange";
+    } else if (typeof document.msHidden !== "undefined") {
+        visibilityChange = "msvisibilitychange";
+    } else if (typeof document.webkitHidden !== "undefined") {
+        visibilityChange = "webkitvisibilitychange";
+    }
+    document.addEventListener(visibilityChange, function() {
+        clearTimeout(t);
+        clearTimeout(f);
+    }, false);
+    window.addEventListener("pagehide", function(){
+        clearTimeout(t);
+        clearTimeout(f);
+    }, false);
+}
+
+$("#show_curlang").html(Em.I18n.get("Touch.lang." + g_userLang));
+function showLangList(){
+    langlist = true;
+    $("#login_route").hide();
+    $("#indexpage_footer").hide();
+    $("#switch_lang").hide();
+    $("#LangList_login_page").show();
+    LanguageList();
+}
+
+function showPrivatePage(){
+    switch(g_userLang){
+        case "ar":
+            lang = "sa";
+            break;
+        case "zh":
+            lang = "cn";
+            break;
+        case "en":
+            lang = "us";
+            break;
+        case "ms":
+            lang = "my";
+            break;
+        default:
+            lang = g_userLang;
+            break;
+    }
+    var path = "/html/privacypolicy-"+g_userLang.toLowerCase()+"_"+lang.toLowerCase()+".html";
+    $("#privacy_link").attr("href",path);
+    $("#login_leadapp_privacy_link").attr("href",path);
+}
+function GoToForgetsGuidePage(){
+    $("#login_route").hide();
+    Atp.DeviceInfoController.load(function(){
+        $("#renew").removeClass("router_renew_emui").addClass(Atp.DeviceInfoController.Touchui_GuideRenewClass);
+        $("#switch_lang").hide();
+        $("#forgetps_view").show();
+    });    
+    $("#indexpage_footer").hide();
+}
+function BackToLogin(){
+    $("#login_route").show();
+    $("#forgetps_view").hide();
+    if(Atp.LangsController.isMultiLan){
+        $("#switch_lang").show();
+    }
+    $("#indexpage_footer").show();
+}
+function utilShowEyePassword(checkboxid,passwordinput,textinput,inputid,curinputid){
+    var src = $("#"+checkboxid).attr("src");
+    if (typeof(src) === "undefined"){
+        return;
+    }
+    if(src.indexOf("eyehide") >= 0){
+        $("#"+passwordinput).hide();
+        $("#"+textinput).show();
+        $("#"+inputid).val($("#"+curinputid).val())
+        return true;
+    }
+    else{
+        $("#"+passwordinput).show();
+        $("#"+textinput).hide();
+        $("#"+inputid).val($("#"+curinputid).val())
+        return false;
+    }
+}
+$('#Password').on("change blur input",function() {
+    $("#Password_text").val($(this).val());
+});
+$('#Password').on("keyup",function() {
+    if($("#Password").val() != ""){
+        $("#route_submit_btn > div").removeClass("ui-btn-hover-a").addClass("ui-btn-submit");
+    } else {
+        $("#route_submit_btn > div").removeClass("ui-btn-submit").addClass("ui-btn-hover-a");
+    }
+});
+$('#Password_text').on("change blur input",function() {
+    $("#Password").val($(this).val());
+});
+$('#Password_text').on("keyup",function() {
+    if($("#Password_text").val() != ""){
+        $("#route_submit_btn > div").removeClass("ui-btn-hover-a").addClass("ui-btn-submit");
+    } else {
+        $("#route_submit_btn > div").removeClass("ui-btn-submit").addClass("ui-btn-hover-a");
+    }
+});
+$('#leadapp_Password').on("keyup",function() {
+    if($("#leadapp_Password").val() != ""){
+        $("#leadapp_login_submit_btn").removeClass("leadapp-btn-hover-a").addClass("leadapp-btn-submit");
+    } else {
+        $("#leadapp_login_submit_btn").removeClass("leadapp-btn-submit").addClass("leadapp-btn-hover-a");
+    }
+});
+</script> 
+ </body>
+</html>

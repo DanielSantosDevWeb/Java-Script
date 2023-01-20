@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste 123</title>
+  <style> 
+    
+  body {
+       background-color: deepskyblue;
+       color : white;
+    
+  }
+  
+    
+    
+  </style>
+  
+</head>
+
+<body>
+  <center>
+     <h1>Ola mundo </h1>
+  
+     <p>oi meu chapa</p>
+  
+  </center>
+  
+  <script>
+
+    var n1 = Number(window.prompt('digite um numero')) //Number escrito com maiusculo
+    var n2 = Number(window.prompt('digite o mesmo numero'))
+    var nome = prompt('digite seu nome')
+    
+    
+    var soma = n1 + n2
+    var din = soma.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})
+    
+    
+    document.write(n1 + '+' + n2 + ' a resposta é ' + soma.toFixed(3) ) //toFixed() transforma em numero
+    document.write(`. Ola ${nome} seu salario é ${din} <br />  `)   //<br/> usa como quebra de linha
+    document.write(`seu nome maiuscolo ${nome.toUpperCase()}  <br />  `) // toUpperCase para maiusculo
+    document.write(`seu nome minusculo ${nome.()}`)  //toLowerCase para minusculo
+    
+    
+  </script>
+  
+
+
+</body>
+
+</html>

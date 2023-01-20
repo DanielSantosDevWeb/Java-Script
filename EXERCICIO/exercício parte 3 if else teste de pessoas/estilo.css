@@ -1,0 +1,30 @@
+header {
+   text-align: center ;
+   
+}
+
+section {
+   height: 300px;
+   width: 300px;
+   background-color: deepskyblue;
+   margin: auto;
+   border-radius: 20px;
+   box-shadow: 5px 5px 10px black;
+   padding: 20px;
+   
+   
+   
+}
+
+img {
+   height: 100px;
+   width: 200px;
+   padding-left: 50px
+   
+}
+
+footer {
+   text-align: center;
+   padding: 20px;
+   
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nivel da bateria</title>
+</head>
+
+<body>
+    <div id="bateria">
+        a
+    </div>
+    <input type="button" value="click" id="button">
+    
+    
+    <script>
+        var bateria = document.getElementById('bateria')
+        var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery
+        var bateria = new getBattery()
+        
+        var btn = document.getElementById('button')
+        
+        btn.addEventListener('click' , ()=> {
+            var level = bateria.level
+            console.log(level)
+        })
+        
+    </script>
+
+</body>
+
+</html>

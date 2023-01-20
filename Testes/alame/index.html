@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alarme</title>
+    
+    <style>
+        input {
+            width: 50px;
+        }
+        
+        div {
+            text-align: center;
+            font-size: 40px;
+            padding: 30px;
+            }
+        
+        #teclado {
+            
+            padding: 20px;
+            
+        }
+    </style>
+    
+</head>
+
+<body>
+    
+    <h1>CONOMETRO</h1>
+    
+    <input type="text" name="" id="horas"> hora
+    <input type="text" name="" id="minutos" /> minutos
+    <input type="text" name="" id="segundos"> segundos
+    
+    <input type="button" value="iniciar" onclick="iniciar()">
+    
+    <section id="teclado">
+        
+        <input type="button" value="1" id="n1" onclick="addNumero(value)">
+        <input type="button" name="" id="n2" value="2" onclick="addNumero(value)"/>
+         <input type="button" name="" id="n3" value="3" onclick="addNumero(value)"/>
+          <input type="button" name="" id="n4" value="4" onclick="addNumero(value)"/>
+           <input type="button" name="" id="n5" value="5" onclick="addNumero(value)"/>
+            <input type="button" name="" id="n6" value="6" onclick="addNumero(value)"/>
+             <input type="button" name="" id="n7" value="7" onclick="addNumero(value)"/>
+              <input type="button" name="" id="n8" value="8" onclick="addNumero(value)"/>
+               <input type="button" name="" id="n9" value="9" onclick="addNumero(value)"/>
+                <input type="button" name="" id="n0" value="0" onclick="addNumero(value)"/>
+        
+    </section>
+    
+    <div id="div">00:00</div>
+    
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+
+</html>
