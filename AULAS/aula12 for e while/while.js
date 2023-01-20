@@ -10,7 +10,7 @@ function repet() {
    
    while (n1 <= tnumb) {
       
-      divi.innerHTML +=`<br><strong>repetição ${n1} : ${tex}</strong></br>`
+      divi.innerHTML +=`<br><strong>repetição do numero ${n1} : ${tex}</strong></br>`
       n1++
       
    }
